@@ -64,7 +64,7 @@ public class BuyingProcess extends Base_PO {
     }
 
     @Then("I check out and buy the product")
-    public void i_check_out_and_buy_the_product() throws InterruptedException {
+    public void i_check_out_and_buy_the_product() {
 
         // Check out to place the order
         cartPo.placeOrder();
@@ -77,7 +77,7 @@ public class BuyingProcess extends Base_PO {
     }
 
     @And("I get order placed successfully message")
-    public void i_get_order_placed_successfully_message() throws InterruptedException {
+    public void i_get_order_placed_successfully_message() {
 
         //Check if we get the order confirmation message.
         assertTrue("Failed to receive order confirmation", checkOutFormPo.isPurchaseConfirmed());
