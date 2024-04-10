@@ -15,6 +15,9 @@ public class Product_PO extends Base_PO{
     @FindBy(xpath = "//a[normalize-space()='Add to cart']")
     private WebElement addToCartButton;
 
+    @FindBy(tagName = "h2")
+    private WebElement productTitle;
+
     public Product_PO() {
         super();
     }
@@ -23,8 +26,8 @@ public class Product_PO extends Base_PO{
         waitForWebElementAndClick(addToCartButton);
     }
 
-    public boolean isOnProductPage(){
-        return getDriver().getCurrentUrl().equals("https://www.demoblaze.com/prod.html?idp_=1");
+    public boolean isOnProductPage(String productName){
+        return findTheElement(productTitle).getText().equals(productName);
     }
 
     public boolean confirmAlertIfPresent(){

@@ -25,7 +25,7 @@ public class Cart_PO extends Base_PO {
     }
 
     public boolean isSelectedItemInCart(String productName) {
-        WebElement productSelected = cartContainer.findElement(By.xpath("//td[normalize-space()='Samsung galaxy s6']"));
+        WebElement productSelected = cartContainer.findElement(By.xpath("//td[normalize-space()='"+productName+"']"));
         return productSelected.getText().equals(productName);
     }
 }

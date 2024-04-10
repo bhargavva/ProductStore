@@ -37,9 +37,9 @@ public class BuyingProcess extends Base_PO {
     public void i_select_a_product_to_view_details() {
 
         //Select a product and click on it
-        homePo.navigateToProductPage("Samsung galaxy s6");
+        homePo.navigateToProductPage("Nokia lumia 1520");
         //Check if driver navigated on to the product details page.
-        assertTrue("Failed to navigate to product details page", productPo.isOnProductPage());
+        assertTrue("Failed to navigate to product details page", productPo.isOnProductPage("Nokia lumia 1520"));
     }
 
     @And("I add product to cart")
@@ -60,7 +60,7 @@ public class BuyingProcess extends Base_PO {
         assertTrue("Failed to navigate to cart page", cartPo.isOnCartPage());
         // Verify the product Selected.
         assertTrue("Filed to add selected product to Cart",
-                cartPo.isSelectedItemInCart("Samsung galaxy s6"));
+                cartPo.isSelectedItemInCart("Nokia lumia 1520"));
     }
 
     @Then("I check out and buy the product")
