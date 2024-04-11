@@ -6,7 +6,7 @@ import org.testng.annotations.DataProvider;
 
 @CucumberOptions(features = {"classpath:productStore"},
                 glue = {"productStore.stepDefinitions"},
-                tags = "@buying-process",
+                tags = "",
                 plugin = { "pretty", "html:target/cucumber", "json:target/cucumber.json"},
                 monochrome = false,
                 dryRun = false)
