@@ -39,7 +39,8 @@ public class BuyingProcess extends Base_PO {
         //Select a product and click on it
         homePo.navigateToProductPage("Nokia lumia 1520");
         //Check if driver navigated on to the product details page.
-        assertTrue("Failed to navigate to product details page", productPo.isOnProductPage("Nokia lumia 1520"));
+        assertTrue("Failed to navigate to product details page",
+                productPo.isOnProductPage("Nokia lumia 1520"));
     }
 
     @And("I add product to cart")
@@ -48,7 +49,8 @@ public class BuyingProcess extends Base_PO {
         // Find the add to Card Button and click on it.
         productPo.addProductToCart();
         // Confirm the alert message
-        assertTrue("Unable to verify if product added to cart", productPo.confirmAlertIfPresent());
+        assertTrue("Unable to verify if product added to cart",
+                productPo.confirmAlertIfPresent());
     }
 
     @When("I find my selected products in cart")
